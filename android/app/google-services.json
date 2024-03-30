@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "727560303785",
+    "project_id": "pulsesocial-232db",
+    "storage_bucket": "pulsesocial-232db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727560303785:android:062d997e07129c6b8225b8",
+        "android_client_info": {
+          "package_name": "com.example.socialmedia_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-DMvo5Ny2hWHZRwq7hKVm4luGkdIh0jw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
