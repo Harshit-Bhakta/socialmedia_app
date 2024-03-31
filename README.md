@@ -25,7 +25,7 @@ flutter pub get
 
 | Splash Page | Login Page | Register Page | Home Page | Drawer Slide | Profile Page |
 | --- | --- | --- | --- | --- | --- | 
-|  <img src="./assets/SplashPage.png" alt="Screenshot 1" height=450>  | <img src="./assets/loginpage.png" alt="Screenshot 2" height=450> | <img src="./assets/RegisterPage.png" alt="Screenshot 3" height=450> | <img src="./assets/homepage.png" alt="Screenshot 4" height=450> | <img src="./assets/drawerslide.png" alt="Screenshot 5" height=450> | <img src="./assets/ProfilePage.png" alt="Screenshot 6" height=450> |
+|  <img src="./assets/Splash.png" alt="Screenshot 1" height=450>  | <img src="./assets/loginpage.png" alt="Screenshot 2" height=450> | <img src="./assets/RegisterPage.png" alt="Screenshot 3" height=450> | <img src="./assets/homepage.png" alt="Screenshot 4" height=450> | <img src="./assets/drawerslide.png" alt="Screenshot 5" height=450> | <img src="./assets/ProfilePage.png" alt="Screenshot 6" height=450> |
 
 
 
