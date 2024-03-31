@@ -1,16 +1,29 @@
-# socialmedia_app
+# PULSE SOCIAL
+A Flutter application that allows users to Create, Read, Update and Delte posts and allows them to comunicate with each ohter .
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+##  TABLE OF CONTENTS
 
-A few resources to get you started if this is your first Flutter project:
+- [Installation](#installation)
+- [Screenshots](#screenshots)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## INSTALLATION
+
+```bash
+git clone https://github.com/Harshit-Bhakta/socialmedia_app
+cd socialmedia_app
+flutter pub get
+```
+
+## SCREENSHOTS
+
+
+
+
+| Home Page | Notes Page | Delete Promt |
+| --- | --- | --- |
+|  <img src="./assets/homepage.jpg" alt="Screenshot 1" height=450>  | <img src="./assets/home.jpg" alt="Screenshot 2" height=450> | <img src="./assets/delete.jpg" alt="Screenshot 3" height=450> |
+
+
