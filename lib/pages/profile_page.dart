@@ -57,7 +57,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
         appBar: AppBar(
           title: Padding(
             padding: const EdgeInsets.only(left:70 ),
@@ -66,7 +66,7 @@ class _ProfilePageState extends State<ProfilePage> {
               style: TextStyle(color: Colors.black),
             ),
           ),
-          backgroundColor: Color.fromARGB(255, 110, 255, 255),
+          backgroundColor: Color.fromARGB(255, 249, 255, 65),
         ),
         body: StreamBuilder<DocumentSnapshot>(
           stream: FirebaseFirestore.instance
@@ -81,8 +81,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   const SizedBox(height: 50),
                   const Icon(
                     Icons.person,
-                    size: 72,
-                    color: Colors.white,
+                    size: 90,
+                    color: Colors.red,
                   ),
                   const SizedBox(
                     height: 10,
@@ -90,7 +90,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   Text(
                     currentUser.email!,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.grey.shade700),
+                    style: TextStyle(color: Color.fromARGB(255, 255, 125, 3),
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700
+                    ),
                   ),
                   const SizedBox(
                     height: 50,
@@ -99,7 +102,10 @@ class _ProfilePageState extends State<ProfilePage> {
                     padding: const EdgeInsets.only(left: 25.0),
                     child: Text(
                       'My Details',
-                      style: TextStyle(color: Color.fromARGB(255, 114, 22, 242)),
+                      style: TextStyle(color: Color.fromARGB(255, 114, 22, 242),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                      ),
                     ),
                   ),
                   MyTextBox(
@@ -119,7 +125,10 @@ class _ProfilePageState extends State<ProfilePage> {
                     padding: const EdgeInsets.only(left: 25.0),
                     child: Text(
                       'My Posts',
-                      style: TextStyle(color: Color.fromARGB(255, 134, 41, 210)),
+                      style: TextStyle(color: Color.fromARGB(255, 114, 22, 242),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                      ),
                     ),
                   ),
                 ],

@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../components/button.dart';
 import '../components/text_field.dart';
+import 'dart:ui' as ui;
 
 class RegisterPage extends StatefulWidget {
   final Function()? onTap;
@@ -66,23 +67,42 @@ class _RegisterPageState extends State<RegisterPage> {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            padding: const EdgeInsets.symmetric(horizontal: 25 ),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const SizedBox(
-                    height: 50,
+                  const SizedBox(height: 18),
+                   Column(
+                     children: [
+                      ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (Rect bounds){
+                          return ui.Gradient.linear(
+                            Offset(50, 5),
+                            Offset(4.0,20),
+                            [
+                              Color.fromARGB(255, 170, 46, 232),
+                              Color.fromARGB(255, 1, 3, 98),
+                            ]
+                          );
+                        },
+                       child: Icon(
+                          Icons.lock_open,
+                          color: Colors.white,
+                          size: 100,
+                               )),
+                     ],
+                   ),
+                   const SizedBox(height: 25,),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Text("Let's create an account for you!!",
+                        style: TextStyle(
+                          fontSize: 46,
+                          color: Colors.white)),
                   ),
-                  const Icon(
-                    Icons.lock,
-                    color: Colors.white,
-                    size: 100,
-                  ),
-                  const SizedBox(height: 50),
-                  Text("Let's create an account for you",
-                      style: TextStyle(color: Colors.white)),
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 40),
                   MyTextField(
                     controller: emailTextController,
                     hintText: 'Email',

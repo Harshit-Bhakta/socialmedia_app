@@ -11,23 +11,26 @@ class Comment extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Colors.grey.shade700,
+          color: Color.fromARGB(255, 97, 231, 255),
           borderRadius: BorderRadius.circular(4)),
       margin: const EdgeInsets.only(bottom: 5),
       padding: const EdgeInsets.all(15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(text),
+          Text(text,
+          style: TextStyle(color: Colors.black, fontSize: 12,fontWeight: FontWeight.w600),),
           const SizedBox(height: 5),
           Row(
             children: [
               Text(
                 user,
-                style: TextStyle(color: Colors.grey[400]),
+                style: TextStyle(color: Color.fromARGB(255, 129, 127, 127)),
               ),
-              Text(" . ", style: TextStyle(color: Colors.grey[400])),
-              Text(time, style: TextStyle(color: Colors.grey[400])),
+              Text(" . ",
+                  style: TextStyle(color: Color.fromARGB(255, 129, 127, 127))),
+              Text(time,
+                  style: TextStyle(color: Color.fromARGB(255, 129, 127, 127))),
             ],
           ),
         ],

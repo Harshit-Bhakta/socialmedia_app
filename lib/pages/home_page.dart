@@ -46,13 +46,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color.fromARGB(255, 0, 0, 0),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 94, 54, 170),
+        backgroundColor: Color.fromARGB(255, 108, 255, 230),
         elevation: 0,
         title: Padding(
-          padding: EdgeInsets.only(left: 70),
-          child: const Text('Pulse Scale', style: TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+          padding: EdgeInsets.only(left: 50),
+          child: const Text('Pulse Scale', style: TextStyle(color: Color.fromARGB(255, 0, 0, 0),
+          fontWeight: FontWeight.bold,
+          fontSize: 30
+          )),
         ),
       ),
       drawer: MyDrawer(
@@ -69,8 +72,7 @@ class _HomePageState extends State<HomePage> {
                       .collection("User Posts")
                       .orderBy(
                         "TimeStamp",
-                        descending: false,
-                      )
+                        descending: false)
                       .snapshots(),
                   builder: (context, snapshot) {
                     if (snapshot.hasData) {

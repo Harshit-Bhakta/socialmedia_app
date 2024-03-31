@@ -12,8 +12,8 @@ class MyDrawer extends StatelessWidget {
     return Drawer(
       child: Container(
         decoration: BoxDecoration(gradient: LinearGradient(
-          colors: [Color.fromARGB(255, 128, 48, 240), Color.fromARGB(255, 255, 111, 0)],
-          stops: [0.3,0.9],
+          colors: [Color.fromARGB(255, 128, 48, 240), Color.fromARGB(255, 9, 0, 249)],
+          stops: [0.6,0.9],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         )),
@@ -36,8 +36,6 @@ class MyDrawer extends StatelessWidget {
                     icon: Icons.person,
                     text: 'P R O F I L E',
                     onTap: onProfileTap),
-                MyListTile(
-                    icon: Icons.paypal, text: 'P U S S Y', onTap: onProfileTap),
               ],
             ),
             Padding(

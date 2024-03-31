@@ -142,7 +142,12 @@ class _PulsePostState extends State<PulsePost> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Colors.grey.shade800, borderRadius: BorderRadius.circular(8)),
+          gradient: LinearGradient(colors: [Color.fromARGB(255, 12, 1, 126), Color.fromARGB(255, 75, 157, 230)],
+          stops: [0.2,0.8],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter
+          ),
+           borderRadius: BorderRadius.circular(8)),
       margin: EdgeInsets.only(top: 25, left: 25, right: 25),
       padding: EdgeInsets.all(25),
       child: Column(
@@ -155,17 +160,30 @@ class _PulsePostState extends State<PulsePost> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(widget.message),
+                  Text(widget.message,
+                  style: TextStyle(color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold
+                  ),
+                  ),
                   const SizedBox(height: 5),
                   Row(
                     children: [
                       Text(
                         widget.user + '',
-                        style: TextStyle(color: Colors.grey[400]),
+                        style: TextStyle(color: Color.fromARGB(255, 114, 112, 112),
+                        fontSize: 19,
+                        fontWeight: FontWeight.w400),
                       ),
-                      Text(" . ", style: TextStyle(color: Colors.grey[400])),
+                      Text(" . ", style: TextStyle(color: Color.fromARGB(255, 114, 112, 112),
+                      fontSize: 19,
+                      fontWeight: FontWeight.w400
+                      )),
                       Text(widget.time,
-                          style: TextStyle(color: Colors.grey[400])),
+                          style: TextStyle(color: Color.fromARGB(255, 114, 112, 112),
+                          fontSize: 19,
+                          fontWeight: FontWeight.w400,
+                          )),
                     ],
                   ),
                 ],

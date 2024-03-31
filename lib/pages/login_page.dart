@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(
-                    height: 50),
+                    height: 25),
                    Column(
                      children: [
                       ShaderMask(
@@ -82,10 +82,10 @@ class _LoginPageState extends State<LoginPage> {
                                )),
                      ],
                    ),
-                  const SizedBox(height: 50),
-                  Text("Welcome back, you've been missed!",
-                      style: TextStyle(fontSize: 17, color: Colors.white)),
                   const SizedBox(height: 25),
+                  Text("Welcome back, you've been missed!",
+                      style: TextStyle(fontSize: 40, color: Colors.white)),
+                  const SizedBox(height: 50),
                   MyTextField(
                     controller: emailTextController,
                     hintText: 'Email',
@@ -109,18 +109,18 @@ class _LoginPageState extends State<LoginPage> {
                       children: [
                         Text(
                           "Don't have an account?",
-                          style: TextStyle(color: Colors.white,
+                          style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 17),
                         ),
                         const SizedBox(width: 4),
                         GestureDetector(
                           onTap: widget.onTap,
                           child: const Text(
-                            'Register now',
+                            'Login now',
                             style: TextStyle(
                               fontSize: 17,
                                 fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 43, 238, 225)),
+                                color: Color.fromARGB(255, 11, 211, 221)),
                           ),
                         )
                       ],
