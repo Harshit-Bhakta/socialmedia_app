@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:socialmedia_app/auth/auth.dart';
 import 'package:socialmedia_app/firebase_options.dart';
+import 'package:socialmedia_app/splash_screen.dart';
 import 'package:socialmedia_app/theme/dark_theme.dart';
 import 'package:socialmedia_app/theme/light_theme.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       darkTheme: darkTheme,
-      home:const AuthPage(),
+      home: SplashScreen(),
     );
   }
 }

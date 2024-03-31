@@ -97,31 +97,36 @@ class _RegisterPageState extends State<RegisterPage> {
                   MyTextField(
                       controller: confirmpasswordController,
                       hintText: 'Confirm Password',
-                      obscureText: true),
+                      obscureText: true,),
                   const SizedBox(height: 25),
                   MyButton(
                     onTap: signUp,
                     text: 'Sign up',
                   ),
-                  const SizedBox(height: 25),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Already have an account?',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      const SizedBox(width: 4),
-                      GestureDetector(
-                        onTap: widget.onTap,
-                        child: const Text(
-                          'Login now',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 123, 11, 221)),
+                  const SizedBox(height: 5),
+                  Padding(
+                    padding: const EdgeInsets.only(right:50),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Already have an account?',
+                          style: TextStyle(color: Colors.white,
+                          fontSize: 17),
                         ),
-                      )
-                    ],
+                        const SizedBox(width: 4),
+                        GestureDetector(
+                          onTap: widget.onTap,
+                          child: const Text(
+                            'Login now',
+                            style: TextStyle(
+                              fontSize: 17,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 50, 229, 220)),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),

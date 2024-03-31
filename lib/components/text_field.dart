@@ -17,14 +17,16 @@ class MyTextField extends StatelessWidget {
         obscureText: obscureText,
         decoration: InputDecoration(
             enabledBorder:  OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
+              borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255),
+              ),
             ),
             focusedBorder:  OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey.shade600),
+              borderSide: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),borderRadius: BorderRadius.circular(10)
             ),
-            fillColor: Colors.white,
+            fillColor: const Color.fromARGB(255, 0, 0, 0),
             filled: true,
             hintText: hintText,
-            hintStyle: TextStyle(color: Colors.grey.shade400)));
+            hintStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255))));
   }
 }

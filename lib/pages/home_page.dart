@@ -48,11 +48,11 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color.fromARGB(255, 94, 54, 170),
         elevation: 0,
         title: Padding(
           padding: EdgeInsets.only(left: 70),
-          child: const Text('Pulse Scale', style: TextStyle(color: Colors.white)),
+          child: const Text('Pulse Scale', style: TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
         ),
       ),
       drawer: MyDrawer(
@@ -107,13 +107,16 @@ class _HomePageState extends State<HomePage> {
                     obscureText: false,
                   )),
                   IconButton(
-                      onPressed: postMessage, icon: Icon(Icons.arrow_circle_up))
+                      onPressed: postMessage, icon: Icon(Icons.arrow_circle_up),
+                      color: Colors.white,)
                 ],
               ),
             ),
             Text(
               "Logged in as: ${currentUser!.email}",
-              style: TextStyle(color: Colors.grey),
+              style: TextStyle(color: Color.fromARGB(255, 133, 2, 227),
+              fontSize: 15,
+              fontWeight: FontWeight.w700),
             ),
             const SizedBox(
               height: 50,

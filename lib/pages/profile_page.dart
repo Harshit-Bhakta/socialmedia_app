@@ -57,16 +57,16 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[300],
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         appBar: AppBar(
           title: Padding(
-            padding: const EdgeInsets.only(left: 125),
+            padding: const EdgeInsets.only(left:70 ),
             child: Text(
               "Profile Page",
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black),
             ),
           ),
-          backgroundColor: Colors.grey.shade900,
+          backgroundColor: Color.fromARGB(255, 110, 255, 255),
         ),
         body: StreamBuilder<DocumentSnapshot>(
           stream: FirebaseFirestore.instance
@@ -82,6 +82,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   const Icon(
                     Icons.person,
                     size: 72,
+                    color: Colors.white,
                   ),
                   const SizedBox(
                     height: 10,
@@ -98,7 +99,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     padding: const EdgeInsets.only(left: 25.0),
                     child: Text(
                       'My Details',
-                      style: TextStyle(color: Colors.grey.shade600),
+                      style: TextStyle(color: Color.fromARGB(255, 114, 22, 242)),
                     ),
                   ),
                   MyTextBox(
@@ -118,7 +119,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     padding: const EdgeInsets.only(left: 25.0),
                     child: Text(
                       'My Posts',
-                      style: TextStyle(color: Colors.grey.shade600),
+                      style: TextStyle(color: Color.fromARGB(255, 134, 41, 210)),
                     ),
                   ),
                 ],

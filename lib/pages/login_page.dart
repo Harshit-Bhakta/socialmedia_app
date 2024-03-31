@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:socialmedia_app/components/button.dart';
 import 'package:socialmedia_app/components/text_field.dart';
+import 'dart:ui' as ui;
 
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
@@ -59,35 +60,28 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(
-                    height: 50,
-                  ),
-                  Container(
-                    width: 200,
-                    height: 200,
-                    child: const Icon(
-                      Icons.lock,
-                      color: Colors.black,
-                      size: 100,
-                    ),
-                    decoration: BoxDecoration(
-                        color: Colors.grey.shade500,
-                        boxShadow:[ BoxShadow(
-                            color: Colors.grey,
-                            offset: Offset(5.0, 5.0),
-                            blurRadius: 15.0,
-                            spreadRadius: 1.0),
-                        BoxShadow(
+                    height: 50),
+                   Column(
+                     children: [
+                      ShaderMask(
+                        blendMode: BlendMode.srcIn,
+                        shaderCallback: (Rect bounds){
+                          return ui.Gradient.linear(
+                            Offset(50, 5),
+                            Offset(4.0,20),
+                            [
+                              Color.fromARGB(255, 223, 26, 59),
+                              Color.fromARGB(255, 203, 35, 127),
+                            ]
+                          );
+                        },
+                       child: Icon(
+                          Icons.lock,
                           color: Colors.white,
-                          offset: Offset(-5.0, -5.0),
-                          blurRadius: 15.0,
-                          spreadRadius: 1.0,
-                        ),
-                        ],
-                        borderRadius: BorderRadius.all(
-                          Radius.circular((40)),
-
-                        )),
-                  ),
+                          size: 100,
+                               )),
+                     ],
+                   ),
                   const SizedBox(height: 50),
                   Text("Welcome back, you've been missed!",
                       style: TextStyle(fontSize: 17, color: Colors.white)),
@@ -107,38 +101,37 @@ class _LoginPageState extends State<LoginPage> {
                     onTap: signIn,
                     text: 'Sign in',
                   ),
-                  const SizedBox(height: 25),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Don't have an account?",
-                        style: TextStyle(
-                          fontSize: 17,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.normal,
+                  const SizedBox(height: 5),
+                  Padding(
+                    padding: const EdgeInsets.only(right:50),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Don't have an account?",
+                          style: TextStyle(color: Colors.white,
+                          fontSize: 17),
                         ),
-                      ),
-                      const SizedBox(width: 4),
-                      GestureDetector(
-                        onTap: widget.onTap,
-                        child: const Text(
-                          'Register now',
-                          style: TextStyle(
+                        const SizedBox(width: 4),
+                        GestureDetector(
+                          onTap: widget.onTap,
+                          child: const Text(
+                            'Register now',
+                            style: TextStyle(
                               fontSize: 17,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 123, 11, 221)),
-                        ),
-                      )
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 43, 238, 225)),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                     ],
                   ),
-                ],
               ),
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }
