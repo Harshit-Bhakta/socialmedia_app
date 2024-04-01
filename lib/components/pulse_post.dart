@@ -216,7 +216,7 @@ class _PulsePostState extends State<PulsePost> {
                   Text(
                     '0',
                     style: const TextStyle(
-                        color: Color.fromARGB(255, 143, 47, 47)),
+                        color: Colors.grey),
                   )
                 ],
               ),

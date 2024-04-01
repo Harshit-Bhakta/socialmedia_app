@@ -36,6 +36,11 @@ class MyDrawer extends StatelessWidget {
                     icon: Icons.person,
                     text: 'P R O F I L E',
                     onTap: onProfileTap),
+                    
+                MyListTile(
+                    icon: Icons.paypal_outlined,
+                    text: 'P U S S Y',
+                    onTap: null),    
               ],
             ),
             Padding(

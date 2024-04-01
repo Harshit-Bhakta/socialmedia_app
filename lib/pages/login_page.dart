@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(
-                    height: 25),
+                    height: 5),
                    Column(
                      children: [
                       ShaderMask(
